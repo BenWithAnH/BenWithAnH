@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="terminal">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark light" />
   <meta name="description"
     content="Behn Thomas — Computer Science & Data Science student at Siena University, NCAA Division I distance runner, and software/quantitative developer." />
   <title>Behn Thomas | CS &amp; Data Science</title>
@@ -11,213 +12,252 @@
 </head>
 
 <body>
+  <canvas id="ascii-bg" aria-hidden="true"></canvas>
+
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#about" class="site-title">Behn Thomas</a>
-      <nav aria-label="Primary Navigation">
-        <ul class="nav-list">
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#experience">Experience &amp; Athletics</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="resume.pdf" class="nav-cta">Resume (PDF)</a></li>
-        </ul>
-      </nav>
+      <div class="header-brand">
+        <a href="#about" class="site-title" data-ascii-scramble>Behn Thomas | CS &amp; Data Science</a>
+      </div>
+
+      <div class="header-right">
+        <nav aria-label="Primary Navigation">
+          <ul class="nav-list">
+            <li><a href="#projects" data-ascii-scramble>[01.PROJECTS]</a></li>
+            <li><a href="#experience" data-ascii-scramble>[02.EXPERIENCE]</a></li>
+            <li><a href="#skills" data-ascii-scramble>[03.SKILLS]</a></li>
+            <li><a href="#contact" data-ascii-scramble>[04.CONTACT]</a></li>
+            <li><a href="resume.pdf" class="nav-cta" data-ascii-scramble>[RESUME.PDF &nearr;]</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
+    <div class="container ascii-header-rule" aria-hidden="true"></div>
   </header>
 
   <main class="container">
-    <!-- HERO / ABOUT -->
+    <!-- COMPACT HERO / ABOUT -->
     <section id="about" class="section hero">
-      <p class="eyebrow">Siena University &middot; Expected May 2028 &middot; Loudonville, NY</p>
-      <h1>Behn Thomas</h1>
-      <p class="lead">
-        B.S. candidate in <strong>Computer Science &amp; Data Science</strong> and
-        <strong>NCAA Division I Student-Athlete</strong> (Cross Country / Track &amp; Field).
-        Building full-stack data pipelines, statistical rating models, and quantitative pricing tools in Java and
-        Python.
-      </p>
+      <div class="hero-intro">
+        <h1 class="ascii-hero-name" aria-label="Behn Thomas">
+          <pre aria-hidden="true">██████╗ ███████╗██╗  ██╗███╗   ██╗    ████████╗██╗  ██╗ ██████╗ ███╗   ███╗ █████╗ ███████╗
+██╔══██╗██╔════╝██║  ██║████╗  ██║    ╚══██╔══╝██║  ██║██╔═══██╗████╗ ████║██╔══██╗██╔════╝
+██████╔╝█████╗  ███████║██╔██╗ ██║       ██║   ███████║██║   ██║██╔████╔██║███████║███████╗
+██╔══██╗██╔══╝  ██╔══██║██║╚██╗██║       ██║   ██╔══██║██║   ██║██║╚██╔╝██║██╔══██║╚════██║
+██████╔╝███████╗██║  ██║██║ ╚████║       ██║   ██║  ██║╚██████╔╝██║ ╚═╝ ██║██║  ██║███████║
+╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝       ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝</pre>
+        </h1>
+        <p class="lead">
+          B.S. candidate in <strong>Computer Science &amp; Data Science</strong> and
+          <strong>NCAA Division I Student-Athlete</strong> (Cross Country / Track &amp; Field).
+          Building full-stack data pipelines, statistical rating models, and quantitative pricing tools in Java and
+          Python.
+        </p>
+      </div>
 
-      <ul class="meta-bar" aria-label="Contact and profile links">
-        <li><a href="mailto:b02thom1@siena.edu">b02thom1@siena.edu</a></li>
-        <li><a href="tel:+17205256966">720-525-6966</a></li>
-        <li><a href="https://github.com/BenWithAnH" target="_blank" rel="noopener noreferrer">github.com/BenWithAnH</a>
-        </li>
-      </ul>
+      <div class="hero-meta-row">
+        <ul class="meta-bar" aria-label="Contact and profile links">
+          <li><a href="mailto:b02thom1@siena.edu">b02thom1@siena.edu</a></li>
+          <li><a href="https://www.linkedin.com/in/behn-thomas-803b10429" target="_blank"
+              rel="noopener noreferrer">linkedin.com/in/behn-thomas-803b10429</a></li>
+          <li><a href="https://github.com/BenWithAnH" target="_blank"
+              rel="noopener noreferrer">github.com/BenWithAnH</a></li>
+        </ul>
 
-      <div class="education-strip">
-        <div>
-          <strong>Siena University</strong> &mdash; B.S. in Computer Science and Data Science
+        <div class="education-strip">
+          <span><strong>Siena University</strong> &mdash; B.S. in Computer Science and Data Science</span>
+          <span class="mono-meta">Expected Grad. May 2028</span>
         </div>
-        <div class="mono-meta">Expected Grad. May 2028</div>
       </div>
     </section>
 
-    <!-- PROJECTS -->
+    <!-- PROJECTS (MAIN FOCUS) -->
     <section id="projects" class="section">
-      <div class="section-header">
-        <h2>Selected Projects</h2>
-        <span class="mono-meta">03 featured builds</span>
-      </div>
-
       <div class="stack">
         <!-- Project 1 -->
-        <article class="card project-card">
-          <div class="card-header">
-            <div>
-              <h3>Predictive XC Analytics Platform</h3>
-              <p class="mono-meta">July 2026 &ndash; Present</p>
+        <article class="card project-card" data-categories="systems quant" data-index="01">
+          <div class="ascii-card-rail ascii-card-rail-top" aria-hidden="true"></div>
+
+          <div class="card-body">
+            <div class="card-header">
+              <div>
+                <h3 data-ascii-scramble>Predictive XC Analytics Platform</h3>
+                <p class="mono-meta">July 2026 &ndash; Present</p>
+              </div>
+              <div class="card-links">
+                <a href="https://ncaa-xc-analysis.pages.dev/" target="_blank" rel="noopener noreferrer"
+                  class="link-pill" data-ascii-scramble>Live Site &nearr;</a>
+                <a href="https://github.com/BenWithAnH/ncaa-xc-analysis" target="_blank" rel="noopener noreferrer"
+                  class="link-pill" data-ascii-scramble>GitHub &nearr;</a>
+              </div>
             </div>
-            <div class="card-links">
-              <a href="https://ncaa-xc-analysis.pages.dev/" class="link-pill">Live Site &nearr;</a>
-              <a href="https://github.com/BenWithAnH/ncaa-xc-analysis" target="_blank" rel="noopener noreferrer"
-                class="link-pill">GitHub &nearr;</a>
-            </div>
+
+            <ul class="tag-list" aria-label="Technologies used">
+              <li class="tag" data-ascii-scramble>Java</li>
+              <li class="tag" data-ascii-scramble>Spring Boot</li>
+              <li class="tag" data-ascii-scramble>Vue 3</li>
+              <li class="tag" data-ascii-scramble>PostgreSQL</li>
+              <li class="tag" data-ascii-scramble>Jsoup</li>
+              <li class="tag" data-ascii-scramble>Render</li>
+              <li class="tag" data-ascii-scramble>Supabase</li>
+            </ul>
+
+            <p class="card-summary">Full-stack <strong>Spring Boot</strong> and <strong>Vue 3</strong> analytics
+              platform that normalizes NCAA cross-country times across <strong>1,000+ courses</strong> and simulates
+              team matchups.</p>
+
+            <ul class="bullet-list">
+              <li><strong>Course-Difficulty Model:</strong> Normalizes race times across varying terrains using
+                empirical Bayes shrinkage, trimmed-mean anchor ratios, and recency-weighted fitness curves.</li>
+              <li><strong>Async ETL Pipeline:</strong> Ingests <strong>107K+ race results</strong> across
+                <strong>1,000+ meets</strong> with <code>Jsoup</code> and <code>CompletableFuture</code>, enforcing rate
+                limiting, retries, and row-level reconciliation (<strong>99.7% balance rate</strong>).</li>
+              <li><strong>Race Simulator &amp; Graph Search:</strong> Runs <strong>1,000-iteration</strong> Monte Carlo
+                simulations with official NCAA tiebreakers and finds shortest transitive &ldquo;victory chains&rdquo;
+                between teams.</li>
+              <li><strong>Resource Tuning:</strong> Optimized PostgreSQL and JVM memory for a <strong>0.1 CPU / 512 MB
+                  host</strong> via Hibernate batching, <code>HikariCP</code> pooling, in-memory graph caching, and
+                <strong>100+</strong> <code>JUnit</code>/<code>Mockito</code> tests.</li>
+            </ul>
+
+            <details class="tech-notes">
+              <summary>Architecture &amp; Technical Notes</summary>
+              <div class="tech-notes-body">
+                <p><strong>Statistical Normalization:</strong> Computes meet-specific Course Adjustment Factors (CAF) by
+                  anchoring repeat runner performances with trimmed-mean ratios and shrinking noisy small-sample meets
+                  toward a global prior via Empirical Bayes.</p>
+                <p><strong>Simulation &amp; Graph Search:</strong> Runs 1,000 Monte Carlo team simulations per matchup
+                  using athlete rating distributions and official NCAA displacement tiebreakers; uses breadth-first
+                  traversal over directed head-to-head graphs to surface transitive victory chains.</p>
+                <p><strong>Resource-Constrained Engineering:</strong> Profiled and tuned specifically for a 512 MB RAM /
+                  0.1 vCPU deployment envelope using JDBC batching, bounded <code>HikariCP</code> connection pools, and
+                  compact in-memory adjacency structures.</p>
+              </div>
+            </details>
           </div>
 
-          <ul class="tag-list" aria-label="Technologies used">
-            <li class="tag">Java</li>
-            <li class="tag">Spring Boot</li>
-            <li class="tag">Vue 3</li>
-            <li class="tag">PostgreSQL</li>
-            <li class="tag">Jsoup</li>
-            <li class="tag">Render</li>
-            <li class="tag">Supabase</li>
-          </ul>
-
-          <ul class="bullet-list">
-            <li>Built and deployed a full-stack Spring Boot and Vue 3 web analytics platform that normalizes and rates
-              NCAA cross-country runners on a standardized scale across 1,000+ courses.</li>
-            <li>Designed a course-difficulty rating model using empirical Bayes shrinkage, trimmed-mean anchor ratios,
-              and recency-weighted seasonal fitness curves to normalize race times across varying terrains.</li>
-            <li>Built an asynchronous ETL pipeline using Jsoup and <code>CompletableFuture</code> to ingest 107K+ race
-              results across 1,000+ meets, implementing rate limiting, retries, and automated row-level reconciliation
-              (99.7% balance rate).</li>
-            <li>Developed a 1,000-iteration probabilistic race simulator that applies official NCAA team scoring and
-              tiebreak rules, plus a graph search that finds the shortest transitive &ldquo;victory chain&rdquo; between
-              any two athletes or teams.</li>
-            <li>Tuned PostgreSQL and backend memory for a constrained 0.1 CPU / 512 MB host via Hibernate batch inserts,
-              HikariCP pooling, and in-memory graph caching, backed by 100+ JUnit/Mockito automated contract tests.</li>
-          </ul>
-
-          <details class="tech-notes">
-            <summary>Architecture &amp; Technical Notes</summary>
-            <div class="tech-notes-body">
-              <p><strong>Statistical Normalization:</strong> Computes meet-specific Course Adjustment Factors (CAF) by
-                anchoring repeat runner performances with trimmed-mean ratios and shrinking noisy small-sample meets
-                toward a global prior via Empirical Bayes.</p>
-              <p><strong>Simulation &amp; Graph Search:</strong> Runs 1,000 Monte Carlo team simulations per matchup
-                using athlete rating distributions and official NCAA displacement tiebreakers; uses breadth-first
-                traversal over directed head-to-head graphs to surface transitive victory chains.</p>
-              <p><strong>Resource-Constrained Engineering:</strong> Profiled and tuned specifically for a 512 MB RAM /
-                0.1 vCPU deployment envelope using JDBC batching, bounded HikariCP connection pools, and compact
-                in-memory adjacency structures.</p>
-            </div>
-          </details>
+          <div class="ascii-card-rail ascii-card-rail-bottom" aria-hidden="true"></div>
         </article>
 
         <!-- Project 2 -->
-        <article class="card project-card">
-          <div class="card-header">
-            <div>
-              <h3>Cross-Asset Volatility &amp; Event Risk Engine</h3>
-              <p class="mono-meta">October 2026 &ndash; Present</p>
+        <article class="card project-card" data-categories="quant systems" data-index="02">
+          <div class="ascii-card-rail ascii-card-rail-top" aria-hidden="true"></div>
+
+          <div class="card-body">
+            <div class="card-header">
+              <div>
+                <h3 data-ascii-scramble>Cross-Asset Volatility &amp; Event Risk Engine</h3>
+                <p class="mono-meta">October 2026 &ndash; Present</p>
+              </div>
+              <div class="card-links">
+                <a href="https://github.com/BenWithAnH/event-rv-calc" target="_blank" rel="noopener noreferrer"
+                  class="link-pill" data-ascii-scramble>GitHub &nearr;</a>
+              </div>
             </div>
-            <div class="card-links">
-              <a href="https://github.com/BenWithAnH/event-rv-calc" target="_blank" rel="noopener noreferrer"
-                class="link-pill">GitHub &nearr;</a>
-            </div>
+
+            <ul class="tag-list" aria-label="Technologies used">
+              <li class="tag" data-ascii-scramble>Java 21</li>
+              <li class="tag" data-ascii-scramble>Python</li>
+              <li class="tag" data-ascii-scramble>SciPy</li>
+              <li class="tag" data-ascii-scramble>NumPy</li>
+              <li class="tag" data-ascii-scramble>Matplotlib</li>
+              <li class="tag" data-ascii-scramble>Maven</li>
+            </ul>
+
+            <p class="card-summary">Quantitative pricing and signal-processing engine comparing market-implied event
+              probabilities across equity options, Fed Funds futures, and prediction markets.</p>
+
+            <ul class="bullet-list">
+              <li><strong>Cross-Asset Pipeline:</strong> Aggregates and compares implied probabilities across US equity
+                options, CME 30-Day Fed Funds futures (<code>ZQ</code>), and Polymarket ahead of major macro events.
+              </li>
+              <li><strong>De-Americanization &amp; Smile Fitting:</strong> Strips early-exercise premiums with a
+                memory-efficient <strong>1D dynamic binomial tree</strong> and fits a <strong>5-parameter raw SVI</strong>
+                smile + Breeden-Litzenberger differentiation for continuous risk-neutral densities.</li>
+              <li><strong>FFT Event Deconvolution:</strong> Isolates high-impact <strong>FOMC event spikes</strong> from
+                daily background noise using an in-place <strong>Radix-2 Cooley-Tukey FFT</strong>.</li>
+              <li><strong>Real-Time Tooling:</strong> Automated multi-asset ingestion and comparative visualization in
+                Java Swing and Python.</li>
+            </ul>
+
+            <details class="tech-notes">
+              <summary>Architecture &amp; Technical Notes</summary>
+              <div class="tech-notes-body">
+                <p><strong>De-Americanization (<code>CRR.java</code>):</strong> Uses a rolling 1D backward-induction
+                  Cox-Ross-Rubinstein binomial tree to eliminate American early-exercise premia from equity option
+                  chains
+                  prior to surface fitting.</p>
+                <p><strong>Implied Density Extraction (<code>BS.java</code>, <code>BL.java</code>):</strong> Calibrates
+                  5-parameter Stochastic Volatility Inspired (SVI) smiles in total-variance space and applies
+                  Breeden-Litzenberger second-order strike differentiation
+                  (<code>f_Q(K) = e^(rT) &middot; &part;&sup2;C/&part;K&sup2;</code>) to extract continuous risk-neutral
+                  densities.</p>
+                <p><strong>FFT Jump Deconvolution:</strong> Isolates pure macro-announcement jump distributions by
+                  dividing pre- and post-event characteristic functions in the frequency domain via an in-place Radix-2
+                  Cooley-Tukey FFT.</p>
+              </div>
+            </details>
           </div>
 
-          <ul class="tag-list" aria-label="Technologies used">
-            <li class="tag">Java 21</li>
-            <li class="tag">Python</li>
-            <li class="tag">SciPy</li>
-            <li class="tag">NumPy</li>
-            <li class="tag">Matplotlib</li>
-            <li class="tag">Maven</li>
-          </ul>
-
-          <ul class="bullet-list">
-            <li>Engineered a financial data pipeline that aggregates and compares market-implied probabilities across US
-              equity options, CME 30-Day Fed Funds futures (<code>ZQ</code>), and Polymarket prediction markets ahead of
-              major economic announcements.</li>
-            <li>Built a memory-efficient 1D dynamic binomial tree solver to strip early-exercise premiums and normalize
-              disparate financial contract data into a unified European pricing baseline.</li>
-            <li>Applied non-linear curve fitting (5-parameter raw SVI volatility smile) and numerical differentiation
-              (Breeden-Litzenberger) to convert noisy, discrete market quotes into continuous risk-neutral probability
-              forecasts.</li>
-            <li>Implemented an in-place Radix-2 Cooley-Tukey Fast Fourier Transform (FFT) signal processing algorithm to
-              separate daily background fluctuations from high-impact FOMC event spikes.</li>
-            <li>Automated multi-asset data ingestion and built a comparative visualization suite in Java Swing and
-              Python to track shifting market expectations and pricing anomalies in real time.</li>
-          </ul>
-
-          <details class="tech-notes">
-            <summary>Architecture &amp; Technical Notes</summary>
-            <div class="tech-notes-body">
-              <p><strong>De-Americanization (<code>CRR.java</code>):</strong> Uses a rolling 1D backward-induction
-                Cox-Ross-Rubinstein binomial tree to eliminate American early-exercise premia from equity option chains
-                prior to surface fitting.</p>
-              <p><strong>Implied Density Extraction (<code>BS.java</code>, <code>BL.java</code>):</strong> Calibrates
-                5-parameter Stochastic Volatility Inspired (SVI) smiles in total-variance space and applies
-                Breeden-Litzenberger second-order strike differentiation
-                (<code>f_Q(K) = e^(rT) &middot; &part;&sup2;C/&part;K&sup2;</code>) to extract continuous risk-neutral
-                densities.</p>
-              <p><strong>FFT Jump Deconvolution:</strong> Isolates pure macro-announcement jump distributions by
-                dividing pre- and post-event characteristic functions in the frequency domain via an in-place Radix-2
-                Cooley-Tukey FFT.</p>
-            </div>
-          </details>
+          <div class="ascii-card-rail ascii-card-rail-bottom" aria-hidden="true"></div>
         </article>
 
         <!-- Project 3 -->
-        <article class="card project-card">
-          <div class="card-header">
-            <div>
-              <h3>SEC Form 4 Insider Trade Scraper &amp; Analyzer</h3>
-              <p class="mono-meta">2026</p>
+        <article class="card project-card" data-categories="ai systems" data-index="03">
+          <div class="ascii-card-rail ascii-card-rail-top" aria-hidden="true"></div>
+
+          <div class="card-body">
+            <div class="card-header">
+              <div>
+                <h3 data-ascii-scramble>SEC Form 4 Insider Trade Scraper &amp; Analyzer</h3>
+                <p class="mono-meta">2026</p>
+              </div>
+              <div class="card-links">
+                <a href="https://github.com/BenWithAnH/Project---Copy--3-" target="_blank" rel="noopener noreferrer"
+                  class="link-pill" data-ascii-scramble>GitHub &nearr;</a>
+              </div>
             </div>
-            <div class="card-links">
-              <a href="https://github.com/BenWithAnH/Project---Copy--3-" target="_blank" rel="noopener noreferrer"
-                class="link-pill">GitHub &nearr;</a>
-            </div>
+
+            <ul class="tag-list" aria-label="Technologies used">
+              <li class="tag" data-ascii-scramble>Java</li>
+              <li class="tag" data-ascii-scramble>Jsoup</li>
+              <li class="tag" data-ascii-scramble>OpenCSV</li>
+              <li class="tag" data-ascii-scramble>Gemini API</li>
+              <li class="tag" data-ascii-scramble>Java HttpClient</li>
+              <li class="tag" data-ascii-scramble>Discord Webhooks</li>
+            </ul>
+
+            <p class="card-summary">Automated <strong>SEC EDGAR</strong> pipeline that ingests Form 4 insider filings
+              and uses <code>gemini-2.5-flash</code> to surface high-conviction trades.</p>
+
+            <ul class="bullet-list">
+              <li><strong>EDGAR Ingestion:</strong> Polls corporate filings in Java and extracts raw
+                <code>ownership.xml</code> Form 4 disclosures using SEC-compliant rate-limited headers.</li>
+              <li><strong>Transaction Filtering:</strong> Parses insider roles (directors, officers, 10% owners) to
+                isolate open-market purchases (<code>P</code>) and sales (<code>S</code>), share volumes, and prices.
+              </li>
+              <li><strong>LLM Footnote Triage:</strong> Uses Google Gemini (<code>gemini-2.5-flash</code>) to turn
+                dense legal footnotes into plain-English summaries, separating <strong>discretionary buying</strong>
+                from routine <strong>Rule 10b5-1</strong> plans and tax withholdings.</li>
+              <li><strong>Alerting &amp; State:</strong> Deduplicates filings locally via CSV
+                (<code>checkIfNew</code>) and dispatches real-time alerts to <strong>Discord webhooks</strong>.</li>
+            </ul>
+
+            <details class="tech-notes">
+              <summary>Architecture &amp; Technical Notes</summary>
+              <div class="tech-notes-body">
+                <p><strong>EDGAR XML Discovery (<code>XMLParser.java</code>):</strong> Traverses SEC archive index
+                  directories (<code>sec.gov/Archives/edgar/data/...</code>) to locate raw XML ownership disclosures and
+                  parse structured issuer, owner, and transaction nodes.</p>
+                <p><strong>Footnote Signal Extraction:</strong> Because raw insider transaction feeds are heavily
+                  diluted
+                  by routine equity compensation, tax-withholding sales, and automated 10b5-1 plans, footnote text is
+                  piped through Gemini to classify discretionary conviction trades prior to alerting.</p>
+              </div>
+            </details>
           </div>
 
-          <ul class="tag-list" aria-label="Technologies used">
-            <li class="tag">Java</li>
-            <li class="tag">Jsoup</li>
-            <li class="tag">OpenCSV</li>
-            <li class="tag">Gemini API</li>
-            <li class="tag">Java HttpClient</li>
-            <li class="tag">Discord Webhooks</li>
-          </ul>
-
-          <ul class="bullet-list">
-            <li>Built an automated SEC EDGAR ingestion pipeline in Java that polls corporate filings and extracts raw
-              <code>ownership.xml</code> Form 4 disclosures with SEC-compliant rate-limited headers.
-            </li>
-            <li>Parsed reporting insider roles (directors, officers, 10% owners) and non-derivative transaction tables
-              to isolate open-market purchases (<code>P</code>) and sales (<code>S</code>), share volumes, and execution
-              prices.</li>
-            <li>Integrated Google Gemini (<code>gemini-2.5-flash</code>) to synthesize dense legal and accounting
-              footnotes into plain-English summaries, separating opportunistic open-market buying from pre-scheduled
-              Rule 10b5-1 plans, tax withholdings, and trust transfers.</li>
-            <li>Implemented local CSV state deduplication (<code>checkIfNew</code>) and real-time notification dispatch
-              via Discord webhooks.</li>
-          </ul>
-
-          <details class="tech-notes">
-            <summary>Architecture &amp; Technical Notes</summary>
-            <div class="tech-notes-body">
-              <p><strong>EDGAR XML Discovery (<code>XMLParser.java</code>):</strong> Traverses SEC archive index
-                directories (<code>sec.gov/Archives/edgar/data/...</code>) to locate raw XML ownership disclosures and
-                parse structured issuer, owner, and transaction nodes.</p>
-              <p><strong>Footnote Signal Extraction:</strong> Because raw insider transaction feeds are heavily diluted
-                by routine equity compensation, tax-withholding sales, and automated 10b5-1 plans, footnote text is
-                piped through Gemini to classify discretionary conviction trades prior to alerting.</p>
-            </div>
-          </details>
+          <div class="ascii-card-rail ascii-card-rail-bottom" aria-hidden="true"></div>
         </article>
       </div>
     </section>
@@ -225,42 +265,49 @@
     <!-- EXPERIENCE & LEADERSHIP -->
     <section id="experience" class="section">
       <div class="section-header">
-        <h2>Experience &amp; Leadership</h2>
-        <span class="mono-meta">Athletics &amp; Operations</span>
+        <h2 data-ascii-scramble>Experience</h2>
       </div>
 
       <div class="grid-2">
         <article class="card">
-          <div class="card-header">
-            <div>
-              <h3>Division I Student-Athlete</h3>
-              <p class="subhead">Siena University Athletics &middot; Cross Country / Track &amp; Field</p>
+          <div class="ascii-card-rail ascii-card-rail-top" aria-hidden="true"></div>
+          <div class="card-body">
+            <div class="card-header">
+              <div>
+                <h3 data-ascii-scramble>Division I Student-Athlete</h3>
+                <p class="subhead">Siena University Athletics &middot; Cross Country / Track &amp; Field</p>
+              </div>
+              <span class="mono-meta">Aug 2025 &ndash; Present &middot; Loudonville, NY</span>
             </div>
-            <span class="mono-meta">Aug 2025 &ndash; Present<br />Loudonville, NY</span>
+            <ul class="bullet-list">
+              <li>Devote 30+ hours per week to rigorous physical training, team travel, and NCAA Division I competition
+                while maintaining a demanding Computer Science and Data Science course load.</li>
+              <li>Cultivated elite time-management, discipline, and adaptability through high-volume endurance training
+                and high-stakes athletic environments.</li>
+            </ul>
           </div>
-          <ul class="bullet-list">
-            <li>Devote 30+ hours per week to rigorous physical training, team travel, and NCAA Division I competition
-              while maintaining a demanding Computer Science and Data Science course load.</li>
-            <li>Cultivated elite time-management, discipline, and adaptability through high-volume endurance training
-              and high-stakes athletic environments.</li>
-          </ul>
+          <div class="ascii-card-rail ascii-card-rail-bottom" aria-hidden="true"></div>
         </article>
 
         <article class="card">
-          <div class="card-header">
-            <div>
-              <h3>Head Chef</h3>
-              <p class="subhead">Erie Social Club</p>
+          <div class="ascii-card-rail ascii-card-rail-top" aria-hidden="true"></div>
+          <div class="card-body">
+            <div class="card-header">
+              <div>
+                <h3 data-ascii-scramble>Head Chef</h3>
+                <p class="subhead">Erie Social Club</p>
+              </div>
+              <span class="mono-meta">June 2023 &ndash; Aug 2025 &middot; Erie, CO</span>
             </div>
-            <span class="mono-meta">June 2023 &ndash; Aug 2025<br />Erie, CO</span>
+            <ul class="bullet-list">
+              <li>Directed daily operations and resource planning in a fast-paced, high-turnover environment, mentoring
+                and rapidly onboarding new team members to maintain continuous workflow.</li>
+              <li>Demonstrated strong adaptability and rapid problem-solving during peak service volume, independently
+                managing high-pressure situations and improvising solutions to accommodate frequently changing
+                constraints.</li>
+            </ul>
           </div>
-          <ul class="bullet-list">
-            <li>Directed daily operations and resource planning in a fast-paced, high-turnover environment, mentoring
-              and rapidly onboarding new team members to maintain continuous workflow.</li>
-            <li>Demonstrated strong adaptability and rapid problem-solving during peak service volume, independently
-              managing high-pressure situations and improvising solutions to accommodate frequently changing
-              constraints.</li>
-          </ul>
+          <div class="ascii-card-rail ascii-card-rail-bottom" aria-hidden="true"></div>
         </article>
       </div>
     </section>
@@ -268,26 +315,41 @@
     <!-- TECHNICAL SKILLS -->
     <section id="skills" class="section">
       <div class="section-header">
-        <h2>Technical Skills</h2>
-        <span class="mono-meta">Core Stack</span>
+        <h2 data-ascii-scramble>Skills</h2>
       </div>
 
       <dl class="skills-grid">
         <div class="card skill-box">
-          <dt>Languages</dt>
-          <dd>Java, Python, SQL, JavaScript / TypeScript, HTML / CSS</dd>
+          <div class="ascii-card-rail ascii-card-rail-top" aria-hidden="true"></div>
+          <div class="card-body">
+            <dt data-ascii-scramble>Languages</dt>
+            <dd>Java, Python, SQL, JavaScript / TypeScript, HTML / CSS</dd>
+          </div>
+          <div class="ascii-card-rail ascii-card-rail-bottom" aria-hidden="true"></div>
         </div>
         <div class="card skill-box">
-          <dt>Frameworks &amp; Databases</dt>
-          <dd>Spring Boot, Vue 3, PostgreSQL, Spring Data JPA, JUnit</dd>
+          <div class="ascii-card-rail ascii-card-rail-top" aria-hidden="true"></div>
+          <div class="card-body">
+            <dt data-ascii-scramble>Frameworks &amp; Databases</dt>
+            <dd>Spring Boot, Vue 3, PostgreSQL, Spring Data JPA, JUnit</dd>
+          </div>
+          <div class="ascii-card-rail ascii-card-rail-bottom" aria-hidden="true"></div>
         </div>
         <div class="card skill-box">
-          <dt>Libraries</dt>
-          <dd>NumPy / SciPy, Pandas, Matplotlib, Jsoup, Gson, Java HttpClient, Jackson, Axios, Mockito, OpenCSV</dd>
+          <div class="ascii-card-rail ascii-card-rail-top" aria-hidden="true"></div>
+          <div class="card-body">
+            <dt data-ascii-scramble>Libraries</dt>
+            <dd>NumPy / SciPy, Pandas, Matplotlib, Jsoup, Gson, Java HttpClient, Jackson, Axios, Mockito, OpenCSV</dd>
+          </div>
+          <div class="ascii-card-rail ascii-card-rail-bottom" aria-hidden="true"></div>
         </div>
         <div class="card skill-box">
-          <dt>Developer Tools</dt>
-          <dd>Git, Linux, Docker, Maven, Vite, IntelliJ IDEA, VS Code, ADB</dd>
+          <div class="ascii-card-rail ascii-card-rail-top" aria-hidden="true"></div>
+          <div class="card-body">
+            <dt data-ascii-scramble>Developer Tools</dt>
+            <dd>Git, Linux, Docker, Maven, Vite, IntelliJ IDEA, VS Code, ADB</dd>
+          </div>
+          <div class="ascii-card-rail ascii-card-rail-bottom" aria-hidden="true"></div>
         </div>
       </dl>
     </section>
@@ -296,17 +358,20 @@
   <footer id="contact" class="site-footer">
     <div class="container footer-inner">
       <div>
-        <strong>Behn Thomas</strong>
+        <strong class="footer-brand" data-ascii-scramble>Behn Thomas | CS &amp; Data Science</strong>
         <p class="mono-meta">Computer Science &amp; Data Science &middot; Siena University</p>
       </div>
       <ul class="footer-links">
         <li><a href="mailto:b02thom1@siena.edu">b02thom1@siena.edu</a></li>
-        <li><a href="tel:+17205256966">720-525-6966</a></li>
+        <li><a href="https://www.linkedin.com/in/behn-thomas-803b10429" target="_blank"
+            rel="noopener noreferrer">LinkedIn</a></li>
         <li><a href="https://github.com/BenWithAnH" target="_blank" rel="noopener noreferrer">GitHub</a></li>
         <li><a href="resume.pdf">Resume (PDF)</a></li>
       </ul>
     </div>
   </footer>
+
+  <script src="ascii-engine.js" defer></script>
 </body>
 
 </html>
