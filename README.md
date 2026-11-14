@@ -1,4 +1,12 @@
-## Hi there 👋
+# Behn Thomas
+
+Computer Science & Data Science student at Siena University and NCAA Division I distance runner (Cross Country / Track & Field).
+
+Building full-stack software, data pipelines, and quantitative tools.
+
+- **Website:** [benwithanh.github.io/BenWithAnH-Site](https://benwithanh.github.io/BenWithAnH-Site/)
+- **LinkedIn:** [linkedin.com/in/behn-thomas-803b10429](https://www.linkedin.com/in/behn-thomas-803b10429)
+- **Email:** b02thom1@siena.edu
 
 <!--
 **BenWithAnH/BenWithAnH** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
