@@ -4,7 +4,7 @@ Computer Science & Data Science student at Siena University and NCAA Division I 
 
 Building full-stack software, data pipelines, and quantitative tools.
 
-- **Website:** [benwithanh.github.io/BenWithAnH-Site](https://benwithanh.github.io/BenWithAnH-Site/)
+- **Website:** [benwithanh.github.io](https://benwithanh.github.io)
 - **LinkedIn:** [linkedin.com/in/behn-thomas-803b10429](https://www.linkedin.com/in/behn-thomas-803b10429)
 - **Email:** b02thom1@siena.edu
 
